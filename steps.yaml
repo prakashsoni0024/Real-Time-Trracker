@@ -1,0 +1,15 @@
+check if the browser supports geolocation.
+
+set options for high accuracy, a 5 second timeout, and no caching of position data.
+
+use watchPosition to track the user's location continuously.
+
+Emit the latitude and longitude via a socket with "send-location". Log any errors to the console.
+
+Initialize a map centered at coordinates (0, 0) with zoom level of 15 using Leaflet.js. Add OpenStreetMap tiles to the map.
+
+Create an empty object marker.
+
+When receiving the location data via the socket, extract id, latitude and longitude and center the map on the new coordinates.
+
+If a marker for the given id already exists, update its position. Otherwise, create a new marker at the specified coordinates and add it to the map.
