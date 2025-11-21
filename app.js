@@ -28,6 +28,8 @@ app.get('/', (req, res) => {
   res.render("index");
 })
 
+const port = process.env.PORT || 3000;
 server.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Server running on port ${port}`);
+});
+
